@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <title>Randomicon</title>
+</head>
+<body>
+    <header>
+        <h1>Randomicon</h1>
+        <p> <i>Usufrua da pseudo-aleatoriedade!</i> </p>
+        <div style="display: flex; gap: 16px;">
+            <button class="default-button" id="btn-show-functionality-div-1"> 🎲 </button>
+            <button class="default-button" id="btn-show-functionality-div-2"> 🔀 </button>
+            <button class="default-button" id="btn-show-functionality-div-3"> 🍓 </button>
+            <button class="default-button" id="btn-show-functionality-div-4"> 🍥 </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="functionality-div" style="display: flex;">
+
+            <h2>Sorteio de números</h2>
+
+            <div style="display: flex; gap: 32px; align-items: center;">
+                
+                <div id="randgen-result-div">
+                    <h3>Valor Sorteado</h3>
+                    <div id="randgen-result-value-box">
+                        <span id="randgen-result-value">--</span>
+                    </div>
+                </div>
+                <div id="randgen-params">
+                    <div class="randgen-input-area-number">
+                        <label for="randgen-min-input">Valor mínimo</label>
+                        <input type="number" name="randgen-min" id="randgen-min-input" value="1">
+                    </div>
+                    <div class="randgen-input-area-number">
+                        <label for="randgen-max-input">Valor máximo</label>
+                        <input type="number" name="randgen-max" id="randgen-max-input" value="6">
+                    </div>
+                    <div class="randgen-input-area-checkbox">
+                        <input type="checkbox" id="randgen-can-repeat">
+                        <label for="randgen-can-repeat">Permitir repetição?</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="default-button" id="randgen-button-draw-number">
+                    Sortear um número
+                </button>
+                <button class="default-button" id="randgen-button-draw-sequence">
+                    Sortear sequência
+                </button>
+            </div>
+
+            <div id="randgen-history-area">
+                <h3>Histórico de sorteios</h3>
+                <p id="randgen-history-value-list"></p>
+                <div>
+                    <button class="default-button" id="randgen-button-clearhist">
+                        Limpar Histórico
+                    </button>
+                    <button class="default-button" id="randgen-button-showsettings">
+                        Configurar Separadores
+                    </button>
+                </div>
+                <div id="randgen-history-settings">
+                    <div>
+                        <label for="randgen-history-value-separator">Separador de valores: </label>
+                        <input type="text" id="randgen-history-value-separator" value=";">
+                    </div>
+                    
+                    <div id="randgen-history-config-div-use-spaces">
+                        <input type="checkbox" id="randgen-history-use-spaces" checked>
+                        <label for="randgen-history-use-spaces">Também separar com espaço?</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="functionality-div">
+
+            <h2>Embaralhar lista</h2>
+
+            <div style="display: flex; gap: 48px; overflow-x: auto;">
+                <div class="shuffler-list-area">
+                    <h3>Lista original</h3>
+                    <div id="shuffler-value-list"></div>
+                    <div>
+                        <button class="default-button" id="shuffler-button-add-item">Adicionar item</button>
+                        <button class="default-button" id="shuffler-button-clear">Limpar lista</button>  
+                    </div>
+                    <button class="default-button" id="shuffler-button-shuffle">Embaralhar lista</button>
+                    <div class="shuffler-input-area-checkbox">
+                        <input type="checkbox" id="shuffler-one-at-a-time">
+                        <label for="shuffler-one-at-a-time">Sortear um de cada vez?</label>
+                    </div>  
+                </div>
+                
+
+                <div class="shuffler-list-area">
+                    <h3>Lista embaralhada</h3>
+                    <ol id="shuffler-shuffled-value-list"></ol>
+
+                    <button class="default-button" id="shuffler-button-clear-shuffle">Limpar lista embaralhada</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="functionality-div">
+
+            <h2>Nome da sorte</h2>
+
+            <div style="display: flex; gap: 32px; align-items: center;">
+                
+                <div id="randgen-result-div" style="display: flex; align-items: center;">
+                    <h3>Nome sorteado</h3>
+                    <p id="funnyname-result-value">--</p>
+                    <div>
+                        <button class="default-button" id="funnyname-button-draw">Sortear</button>
+                        <button class="default-button" id="funnyname-button-clear">Limpar campo</button>  
+                    </div>
+
+                    <p id="funnyname-rare-value-message">⭐️ Nome <b>raro</b> encontrado! ⭐️</p>
+                        <!--
+                        <p id="funnyname-counter"></p>
+                        -->
+                    <div id="funnyname-rare-value-found-div">
+                        <h3 id="funnyname-rare-value-found-list-title">Nomes raros encontrados</h3>
+                        <p id="funnyname-rare-value-counter"></p>
+                        <ul id="funnyname-rare-value-found-list"></ul>
+                    </div>
+                    <div id="funnyname-impossible-achievement"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="functionality-div">
+            <h2>Espaço 4</h2>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Desenvolvido por <b>Rafael Fontes</b> -
+            <a href="https://github.com/rafaelfontes-dev">rafaelfontes-dev</a>
+        </p>
+    </footer>
+
+    <script type="module" src="./assets/scripts/index.js" charset="utf-8"></script>
+
+</body>
+</html>

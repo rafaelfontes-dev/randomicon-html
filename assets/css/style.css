@@ -1,0 +1,378 @@
+/* ===== Corpo ===== */
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    background-color:antiquewhite;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+
+/* ===== Cabeçalho ===== */
+
+header {
+    background-color: sienna;
+    
+    padding: 20px 0;
+
+    border: 4px;
+    border-style: dotted;
+    border-color: brown;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 8px;
+}
+
+header h1 {
+    color: yellow;
+    margin: 0;
+}
+
+header p {
+    color: antiquewhite;
+    margin-top: 8px;
+}
+
+header nav {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+/* ===== 'Miolo' da página ===== */
+
+main {
+
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+
+    gap: 12px;
+}
+
+.functionality-div {
+    background-color: chocolate;
+    color: gold;
+
+    font-size: 1rem;
+
+    margin: 16px 0;
+    padding: 16px 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    border: 4px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 8px;
+
+    width: 100%;
+
+    overflow-y: auto;
+
+}
+
+.functionality-div h2 {
+    margin: 8px 0;
+}
+
+#randgen-result-div {
+    color: gold;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 12px;
+}
+
+#randgen-result-div h3 {
+    margin-top: 0;    
+}
+
+#randgen-result-value-box {
+    background-color: white;
+    color: chocolate;
+
+    font-family: monospace;
+    text-align: center;
+    font-size: 20px;
+
+    margin-top: -8px;
+    padding: 12px;
+
+    border-radius: 12px;
+}
+
+#randgen-params {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.randgen-input-area-number {
+
+    font-size: 1.15rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.randgen-input-area-checkbox {
+    font-size: 1.15rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.randgen-input-area-number input {
+    color: chocolate;
+
+    font-size: 1.25rem;
+    font-family: monospace;
+    border-radius: 4px;
+
+    padding: 4px;
+
+    text-align: center;
+    width: 100px;
+}
+
+.default-button {
+    background-color: white;
+    color: chocolate;
+
+    font-size: 1rem;
+
+    margin-top: 12px;
+    padding: 4px 16px;
+
+    border-radius: 8px;
+}
+
+#randgen-history-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 16px;
+}
+
+#randgen-history-value-list {
+    background-color: antiquewhite;
+    color: chocolate;
+
+    text-align: center;
+
+    margin-top: -8px;
+    padding: 16px 8px;
+
+    border-radius: 4px;
+
+    white-space: nowrap;
+    overflow-x: auto;
+
+    min-height: 2.5rem;
+    width: 200px;
+}
+
+#randgen-history-config-div-use-spaces {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#randgen-history-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 16px;
+
+    visibility: hidden;
+}
+
+#randgen-history-value-separator {
+    color: chocolate;
+
+    font-size: 1rem;
+    font-family: monospace;
+    border-radius: 4px;
+
+    text-align: center;
+
+    padding: 4px;
+
+    text-align: center;
+    width: 40px;
+}
+
+
+.shuffler-list-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#shuffler-button-shuffle {
+    width: 100%;
+}
+
+#randgen-button-clearhist,
+#shuffler-button-clear,
+#shuffler-button-clear-shuffle,
+#funnyname-button-clear {
+    color: red;
+    font-weight: bold;
+}
+
+#shuffler-value-list,
+#shuffler-shuffled-value-list,
+#funnyname-rare-value-found-list
+{
+    background-color: antiquewhite;
+    color: chocolate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    margin-top: -8px;
+    padding: 16px;
+
+    border-radius: 8px;
+    border-style: groove;
+
+    height: 180px;
+    width: 200px;
+
+    overflow-y: scroll;
+}
+
+#shuffler-shuffled-value-list li {
+    margin-left: 16px;
+    padding-bottom: 4px;
+}
+
+.shuffler-value-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 8px;
+    
+    gap: 8px;
+}
+
+.shuffler-value-line button {
+    background-color: chocolate;
+    color: yellow;
+    
+    border-radius: 4px;
+}
+
+.shuffler-value-line input {
+    border-radius: 4px;
+
+    width: 100%;
+}
+
+.shuffler-input-area-checkbox {
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+#funnyname-result-value {
+    background-color: white;
+    color: chocolate;
+
+    text-align: center;
+    font-size: 20px;
+
+    margin-top: -8px;
+    padding: 12px;
+
+    border-radius: 12px;
+
+    width: 300px;
+}
+
+#funnyname-rare-value-message,
+#funnyname-rare-value-counter,
+#funnyname-rare-value-found-div {
+    visibility: hidden;
+}
+
+#funnyname-rare-value-found-list li {
+    margin-left: 24px;
+}
+
+#funnyname-rare-value-found-list-title {
+    margin-bottom: 0;
+}
+
+#funnyname-impossible-achievement {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* ===== Rodapé ===== */
+
+footer {
+    background-color: sienna;
+    color: aliceblue;
+    
+    border: 2px;
+    border-style: dotted;
+    border-color: brown;
+
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+footer a {
+    text-decoration-color: aliceblue;
+    color: antiquewhite;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
