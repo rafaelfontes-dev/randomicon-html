@@ -13,13 +13,14 @@ export function getRandomInt( min, max ) {
 
     let rndBuffer = new Uint32Array( 1 );
 
-    // um método menos previsível que o Math.random()
+    // abaixo, um método conhecido por garantir menos previsibilidade
+    // do que o Math.random()
+
     crypto.getRandomValues( rndBuffer );
 
-    let rnd = rndBuffer[0] % ( valuesDiff + 1 );
+    let rndAddition = rndBuffer[0] % ( valuesDiff + 1 );
 
-    //return min + parseInt( Math.random() * Number( max - min + 1 ) );
-    return min + rnd;
+    return min + rndAddition;
 
 }
 
@@ -43,6 +44,7 @@ export function getRandomIntArray( min, max ) {
     let rnd = 0;
 
     for( let i = 0; i < arraySize; i++ ) {
+        
         do {
             rnd = getRandomInt( min, max );
         } while( array.includes( rnd ) );

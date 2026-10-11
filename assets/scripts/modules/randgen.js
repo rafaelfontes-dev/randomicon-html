@@ -98,9 +98,9 @@ function drawAndShowRandomNumber() {
         resultElement.style.opacity = 0;
 
         setTimeout( () => {
-            resultElement.style.transition = "opacity 200ms ease-in-out";
+            resultElement.style.transition = "opacity 100ms ease-in-out";
             resultElement.style.opacity = 1;
-        }, 200 );
+        }, 100 );
         
         let numSeparator = historyValueSeparatorElement.value;
         let useSpaceSeparator = historyUseSpaceSeparatorElement.checked;
