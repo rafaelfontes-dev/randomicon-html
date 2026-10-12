@@ -11,22 +11,22 @@
     <header>
         <h1>Randomicon</h1>
         <p> <i>Usufrua da pseudo-aleatoriedade!</i> </p>
-        <div style="display: flex; gap: 16px;">
-            <button class="default-button" id="btn-show-functionality-div-1"> 🎲 </button>
-            <button class="default-button" id="btn-show-functionality-div-2"> 🔀 </button>
-            <button class="default-button" id="btn-show-functionality-div-3"> 🍓 </button>
-            <button class="default-button" id="btn-show-functionality-div-4"> 🍥 </button>
+        <div id="navbar-buttons-div">
+            <button class="navbar-button" id="btn-show-functionality-div-1"> 🎲 </button>
+            <button class="navbar-button" id="btn-show-functionality-div-2"> 🔀 </button>
+            <button class="navbar-button" id="btn-show-functionality-div-3"> 🍓 </button>
+            <button class="navbar-button" id="btn-show-functionality-div-4"> 👾 </button>
         </div>
     </header>
 
     <main>
-        <div class="functionality-div" style="display: flex;">
+        <div class="functionality-div">
 
             <h2>Sorteio de números</h2>
 
-            <div style="display: flex; gap: 32px; align-items: center;">
+            <div id="randgen-below-title-div">
                 
-                <div id="randgen-result-div">
+                <div class="default-result-box-div">
                     <h3>Valor Sorteado</h3>
                     <div id="randgen-result-value-box">
                         <span id="randgen-result-value">--</span>
@@ -46,6 +46,7 @@
                         <label for="randgen-can-repeat">Permitir repetição?</label>
                     </div>
                 </div>
+
             </div>
             <div>
                 <button class="default-button" id="randgen-button-draw-number">
@@ -85,7 +86,7 @@
 
             <h2>Embaralhar lista</h2>
 
-            <div style="display: flex; gap: 48px; overflow-x: auto;">
+            <div id="shuffler-below-title-div">
                 <div class="shuffler-list-area">
                     <h3>Lista original</h3>
                     <div id="shuffler-value-list"></div>
@@ -115,9 +116,9 @@
 
             <h2>Nome da sorte</h2>
 
-            <div style="display: flex; gap: 32px; align-items: center;">
+            <div id="funnyname-below-title-div">
                 
-                <div id="randgen-result-div" style="display: flex; align-items: center;">
+                <div class="default-result-box-div" id="funnyname-result-box-div">
                     <h3>Nome sorteado</h3>
                     <p id="funnyname-result-value">--</p>
                     <div>

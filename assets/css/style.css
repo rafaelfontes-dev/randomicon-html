@@ -45,8 +45,7 @@ header p {
     margin-top: 8px;
 }
 
-header nav {
-    list-style: none;
+#navbar-buttons-div {
     display: flex;
     gap: 16px;
 }
@@ -54,7 +53,6 @@ header nav {
 /* ===== 'Miolo' da página ===== */
 
 main {
-
     display: flex;
     flex-direction: row;
     height: 70vh;
@@ -85,14 +83,19 @@ main {
     width: 100%;
 
     overflow-y: auto;
-
 }
 
 .functionality-div h2 {
     margin: 8px 0;
 }
 
-#randgen-result-div {
+#randgen-below-title-div {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.default-result-box-div {
     color: gold;
 
     display: flex;
@@ -127,7 +130,6 @@ main {
 }
 
 .randgen-input-area-number {
-
     font-size: 1.15rem;
 
     display: flex;
@@ -164,7 +166,8 @@ main {
     width: 100px;
 }
 
-.default-button {
+.default-button,
+.navbar-button {
     background-color: white;
     color: chocolate;
 
@@ -174,6 +177,12 @@ main {
     padding: 4px 16px;
 
     border-radius: 8px;
+
+    transition: scale 200ms ease-in-out;
+}
+
+.navbar-button:hover {
+    scale: 110%;
 }
 
 #randgen-history-area {
@@ -234,6 +243,11 @@ main {
     width: 40px;
 }
 
+#shuffler-below-title-div {
+    display: flex;
+    gap: 48px;
+    overflow-x: auto;
+}
 
 .shuffler-list-area {
     display: flex;
@@ -313,6 +327,17 @@ main {
     justify-content: center;
     align-items: center;
     gap: 12px;
+}
+
+#funnyname-below-title-div {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+#funnyname-result-box-div {
+    display: flex;
+    align-items: center;
 }
 
 #funnyname-result-value {
