@@ -104,8 +104,12 @@ main {
     padding: 16px 12px;
 }
 
+.default-result-box-div h3 {
+    text-align: center;
+}
+
 #randgen-result-div h3 {
-    margin-top: 0;    
+    margin-top: 0;
 }
 
 #randgen-result-value-box {
@@ -139,6 +143,10 @@ main {
     gap: 12px;
 
     width: 100%;
+}
+
+.randgen-input-area-number label {
+    text-align: center;
 }
 
 .randgen-input-area-checkbox {
