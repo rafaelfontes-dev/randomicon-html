@@ -48,7 +48,7 @@
                 </div>
 
             </div>
-            <div>
+            <div id="randgen-draw-btns-div">
                 <button class="default-button" id="randgen-button-draw-number">
                     Sortear um número
                 </button>
@@ -60,7 +60,7 @@
             <div id="randgen-history-area">
                 <h3>Histórico de sorteios</h3>
                 <p id="randgen-history-value-list"></p>
-                <div>
+                <div id="randgen-history-settings-btns-div">
                     <button class="default-button" id="randgen-button-clearhist">
                         Limpar Histórico
                     </button>
@@ -68,7 +68,7 @@
                         Configurar Separadores
                     </button>
                 </div>
-                <div id="randgen-history-settings">
+                <div id="randgen-history-hidden-settings">
                     <div>
                         <label for="randgen-history-value-separator">Separador de valores: </label>
                         <input type="text" id="randgen-history-value-separator" value=";">
@@ -95,13 +95,12 @@
                         <button class="default-button" id="shuffler-button-clear">Limpar lista</button>  
                     </div>
                     <button class="default-button" id="shuffler-button-shuffle">Embaralhar lista</button>
-                    <div class="shuffler-input-area-checkbox">
+                    <div class="shuffler-config-div">
                         <input type="checkbox" id="shuffler-one-at-a-time">
                         <label for="shuffler-one-at-a-time">Sortear um de cada vez?</label>
                     </div>  
                 </div>
                 
-
                 <div class="shuffler-list-area">
                     <h3>Lista embaralhada</h3>
                     <ol id="shuffler-shuffled-value-list"></ol>

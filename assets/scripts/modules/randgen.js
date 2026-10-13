@@ -19,7 +19,7 @@ const
         "randgen-history-value-list" ),
 
     historySettingsDivElement = document.getElementById(
-        "randgen-history-settings" ),
+        "randgen-history-hidden-settings" ),
 
     historyValueSeparatorElement = document.getElementById(
         "randgen-history-value-separator" ),
